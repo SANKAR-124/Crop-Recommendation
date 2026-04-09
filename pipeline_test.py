@@ -12,7 +12,7 @@ humidity = float(input("enter the humidity: "))
 ph = float(input("enter the pH level: "))
 rainfall = float(input("enter the rainfall: "))
 
-# Store user input (needed for explanation)
+
 user_input = {
     "N": N,
     "P": P,
@@ -23,13 +23,10 @@ user_input = {
     "rainfall": rainfall
 }
 
-# Prediction
 top3 = predict(N, P, K, temp, humidity, ph, rainfall)
 
-# Cluster
 cluster = get_cluster(N, P, K, temp, humidity, ph, rainfall)
 
-# Final Output
 for crop, prob in top3:
 
     exp = generate_exp(crop, cluster, user_input)
