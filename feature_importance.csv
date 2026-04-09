@@ -1,0 +1,8 @@
+Feature,Importance,Category
+humidity,0.23,climate
+K,0.22,nutrient
+N,0.17,nutrient
+rainfall,0.16,climate
+P,0.15,nutrient
+temperature,0.05,climate
+ph,0.01,soil

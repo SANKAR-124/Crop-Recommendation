@@ -1,0 +1,14 @@
+artifact_uri: file:///d:\ML_1\mlruns/871919796100940140/185bd09dd63542afa9d7ca61c72bf51a/artifacts
+end_time: 1775574810229
+entry_point_name: ''
+experiment_id: '871919796100940140'
+lifecycle_stage: active
+run_id: 185bd09dd63542afa9d7ca61c72bf51a
+run_name: LogisticRegression
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1775574807427
+status: 3
+tags: []
+user_id: Lenovo

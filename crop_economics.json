@@ -1,0 +1,186 @@
+{
+  "rice": {
+    "price_per_unit": 2300,
+    "unit": "quintal",
+    "yield_per_acre": 25,
+    "notes": "MSP-based pricing",
+    "source": "Government MSP",
+    "last_updated": "2025"
+  },
+
+  "maize": {
+    "price_per_unit": 2300,
+    "unit": "quintal",
+    "yield_per_acre": 20,
+    "notes": "MSP-based pricing",
+    "source": "Government MSP",
+    "last_updated": "2025"
+  },
+
+  "chickpea": {
+    "price_per_unit": 5500,
+    "unit": "quintal",
+    "yield_per_acre": 10,
+    "notes": "Pulse MSP approximation",
+    "source": "MSP data",
+    "last_updated": "2025"
+  },
+
+  "cotton": {
+    "price_per_unit": 8000,
+    "unit": "quintal",
+    "yield_per_acre": 10,
+    "notes": "MSP-based pricing",
+    "source": "Government MSP",
+    "last_updated": "2025"
+  },
+
+  "banana": {
+    "price_per_unit": 20,
+    "unit": "kg",
+    "yield_per_acre": 20000,
+    "notes": "Market-based estimate",
+    "source": "Market average",
+    "last_updated": "2025"
+  },
+
+  "apple": {
+    "price_per_unit": 120,
+    "unit": "kg",
+    "yield_per_acre": 10000,
+    "notes": "Market-based estimate",
+    "source": "Market average",
+    "last_updated": "2025"
+  },
+
+  "mango": {
+    "price_per_unit": 50,
+    "unit": "kg",
+    "yield_per_acre": 8000,
+    "notes": "Market-based estimate",
+    "source": "Market average",
+    "last_updated": "2025"
+  },
+
+  "coconut": {
+    "price_per_unit": 30,
+    "unit": "nut",
+    "yield_per_acre": 7000,
+    "notes": "Unit differs (per nut)",
+    "source": "Market average",
+    "last_updated": "2025"
+  },
+  "kidneybeans": {
+    "price_per_unit": 10000,
+    "unit": "quintal",
+    "yield_per_acre": 5,
+    "notes": "Market-based estimate (Rajma)",
+    "source": "Wholesale Market Average",
+    "last_updated": "2025"
+  },
+  "pigeonpeas": {
+    "price_per_unit": 7550,
+    "unit": "quintal",
+    "yield_per_acre": 6,
+    "notes": "MSP-based pricing (Tur/Arhar)",
+    "source": "Government MSP",
+    "last_updated": "2025"
+  },
+  "mothbeans": {
+    "price_per_unit": 7000,
+    "unit": "quintal",
+    "yield_per_acre": 4,
+    "notes": "Market-based estimate",
+    "source": "Wholesale Market Average",
+    "last_updated": "2025"
+  },
+  "mungbean": {
+    "price_per_unit": 8682,
+    "unit": "quintal",
+    "yield_per_acre": 5,
+    "notes": "MSP-based pricing (Moong)",
+    "source": "Government MSP",
+    "last_updated": "2025"
+  },
+  "blackgram": {
+    "price_per_unit": 7400,
+    "unit": "quintal",
+    "yield_per_acre": 4,
+    "notes": "MSP-based pricing (Urad)",
+    "source": "Government MSP",
+    "last_updated": "2025"
+  },
+  "lentil": {
+    "price_per_unit": 6425,
+    "unit": "quintal",
+    "yield_per_acre": 5,
+    "notes": "MSP-based pricing (Masur)",
+    "source": "Government MSP",
+    "last_updated": "2025"
+  },
+  "pomegranate": {
+    "price_per_unit": 80,
+    "unit": "kg",
+    "yield_per_acre": 5000,
+    "notes": "Market-based estimate",
+    "source": "Market average",
+    "last_updated": "2025"
+  },
+  "grapes": {
+    "price_per_unit": 60,
+    "unit": "kg",
+    "yield_per_acre": 10000,
+    "notes": "Market-based estimate",
+    "source": "Market average",
+    "last_updated": "2025"
+  },
+  "watermelon": {
+    "price_per_unit": 15,
+    "unit": "kg",
+    "yield_per_acre": 15000,
+    "notes": "Market-based estimate",
+    "source": "Market average",
+    "last_updated": "2025"
+  },
+  "muskmelon": {
+    "price_per_unit": 25,
+    "unit": "kg",
+    "yield_per_acre": 8000,
+    "notes": "Market-based estimate",
+    "source": "Market average",
+    "last_updated": "2025"
+  },
+  "orange": {
+    "price_per_unit": 40,
+    "unit": "kg",
+    "yield_per_acre": 8000,
+    "notes": "Market-based estimate",
+    "source": "Market average",
+    "last_updated": "2025"
+  },
+  "papaya": {
+    "price_per_unit": 20,
+    "unit": "kg",
+    "yield_per_acre": 20000,
+    "notes": "Market-based estimate",
+    "source": "Market average",
+    "last_updated": "2025"
+  },
+  "jute": {
+    "price_per_unit": 5335,
+    "unit": "quintal",
+    "yield_per_acre": 12,
+    "notes": "MSP-based pricing",
+    "source": "Government MSP",
+    "last_updated": "2025"
+  },
+  "coffee": {
+    "price_per_unit": 15000,
+    "unit": "quintal",
+    "yield_per_acre": 5,
+    "notes": "Market average (Mixed Arabica/Robusta raw beans)",
+    "source": "Market average",
+    "last_updated": "2025"
+  }
+
+}

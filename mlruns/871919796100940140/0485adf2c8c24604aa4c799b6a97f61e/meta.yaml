@@ -1,0 +1,14 @@
+artifact_uri: file:///d:\ML_1\mlruns/871919796100940140/0485adf2c8c24604aa4c799b6a97f61e/artifacts
+end_time: 1775574451481
+entry_point_name: ''
+experiment_id: '871919796100940140'
+lifecycle_stage: active
+run_id: 0485adf2c8c24604aa4c799b6a97f61e
+run_name: Randomforest
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1775574443213
+status: 3
+tags: []
+user_id: Lenovo

@@ -1,0 +1,243 @@
+{
+  "rice": {
+    "temperature": "moderate (20–30°C)",
+    "humidity": "moderate to high (60–90%)",
+    "rainfall": "very high (200–300 mm)",
+    "ph": "5–7",
+    "nitrogen": "moderate to high",
+    "phosphorus": "low",
+    "potassium": "low",
+    "notes": "Highly water-dependent crop requiring flooded or high-rainfall conditions."
+  },
+
+  "maize": {
+    "temperature": "moderate (20–30°C)",
+    "humidity": "moderate (60–90%)",
+    "rainfall": "moderate (50–150 mm)",
+    "ph": "5–7",
+    "nitrogen": "high",
+    "phosphorus": "low",
+    "potassium": "low",
+    "notes": "Adaptable crop with relatively high nitrogen demand."
+  },
+
+  "chickpea": {
+    "temperature": "low to moderate",
+    "humidity": "low",
+    "rainfall": "low",
+    "ph": "narrow range",
+    "nitrogen": "low",
+    "phosphorus": "moderate",
+    "potassium": "low",
+    "notes": "Legume crop suited for cooler and drier conditions."
+  },
+
+  "kidneybeans": {
+    "temperature": "moderate",
+    "humidity": "low",
+    "rainfall": "low to moderate",
+    "ph": "narrow range",
+    "nitrogen": "low",
+    "phosphorus": "moderate",
+    "potassium": "low",
+    "notes": "Sensitive crop requiring stable soil and climate conditions."
+  },
+
+  "pigeonpeas": {
+    "temperature": "moderate",
+    "humidity": "variable",
+    "rainfall": "moderate",
+    "ph": "5–7",
+    "nitrogen": "low",
+    "phosphorus": "moderate",
+    "potassium": "low",
+    "notes": "Highly adaptable legume crop."
+  },
+
+  "mothbeans": {
+    "temperature": "moderate",
+    "humidity": "variable",
+    "rainfall": "low",
+    "ph": "very wide range (3–9)",
+    "nitrogen": "low",
+    "phosphorus": "moderate",
+    "potassium": "low",
+    "notes": "Extremely adaptable crop that tolerates harsh soil conditions."
+  },
+
+  "mungbean": {
+    "temperature": "moderate",
+    "humidity": "moderate",
+    "rainfall": "low",
+    "ph": "5–7",
+    "nitrogen": "low",
+    "phosphorus": "moderate",
+    "potassium": "low",
+    "notes": "Drought-tolerant legume crop."
+  },
+
+  "blackgram": {
+    "temperature": "moderate",
+    "humidity": "moderate",
+    "rainfall": "low",
+    "ph": "5–7",
+    "nitrogen": "low",
+    "phosphorus": "moderate",
+    "potassium": "low",
+    "notes": "Legume crop suited for low rainfall regions."
+  },
+
+  "lentil": {
+    "temperature": "moderate",
+    "humidity": "low",
+    "rainfall": "low",
+    "ph": "narrow range",
+    "nitrogen": "low",
+    "phosphorus": "moderate",
+    "potassium": "low",
+    "notes": "Prefers dry and cool conditions."
+  },
+
+  "banana": {
+    "temperature": "moderate (25–30°C)",
+    "humidity": "moderate to high",
+    "rainfall": "moderate",
+    "ph": "5–7",
+    "nitrogen": "high",
+    "phosphorus": "low",
+    "potassium": "low",
+    "notes": "Requires nutrient-rich soil and stable climate."
+  },
+
+  "mango": {
+    "temperature": "high",
+    "humidity": "moderate",
+    "rainfall": "moderate",
+    "ph": "5–7",
+    "nitrogen": "moderate",
+    "phosphorus": "low",
+    "potassium": "low",
+    "notes": "Grows well in warm climates with moderate rainfall."
+  },
+
+  "apple": {
+    "temperature": "low",
+    "humidity": "high",
+    "rainfall": "moderate",
+    "ph": "5–7",
+    "nitrogen": "low",
+    "phosphorus": "very high",
+    "potassium": "very high",
+    "notes": "Requires cooler climates and high nutrient levels."
+  },
+
+  "grapes": {
+    "temperature": "variable",
+    "humidity": "moderate",
+    "rainfall": "moderate",
+    "ph": "5–7",
+    "nitrogen": "low",
+    "phosphorus": "very high",
+    "potassium": "very high",
+    "notes": "Highly adaptable crop with strong nutrient dependency."
+  },
+
+  "watermelon": {
+    "temperature": "moderate",
+    "humidity": "moderate",
+    "rainfall": "low",
+    "ph": "5–7",
+    "nitrogen": "high",
+    "phosphorus": "low",
+    "potassium": "low",
+    "notes": "Requires controlled rainfall and nutrient-rich soil."
+  },
+
+  "muskmelon": {
+    "temperature": "moderate",
+    "humidity": "high",
+    "rainfall": "low",
+    "ph": "5–7",
+    "nitrogen": "high",
+    "phosphorus": "low",
+    "potassium": "low",
+    "notes": "Sensitive to environmental variation and requires stable conditions."
+  },
+
+  "orange": {
+    "temperature": "variable",
+    "humidity": "high",
+    "rainfall": "moderate",
+    "ph": "5–7",
+    "nitrogen": "moderate",
+    "phosphorus": "low",
+    "potassium": "low",
+    "notes": "Adaptable crop with moderate environmental requirements."
+  },
+
+  "papaya": {
+    "temperature": "high",
+    "humidity": "high",
+    "rainfall": "variable (50–250 mm)",
+    "ph": "narrow range",
+    "nitrogen": "moderate",
+    "phosphorus": "low",
+    "potassium": "low",
+    "notes": "Highly adaptable crop that tolerates wide rainfall variations."
+  },
+
+  "coconut": {
+    "temperature": "high",
+    "humidity": "high",
+    "rainfall": "high",
+    "ph": "5–7",
+    "nitrogen": "moderate",
+    "phosphorus": "low",
+    "potassium": "low",
+    "notes": "Thrives in coastal and humid tropical regions."
+  },
+
+  "cotton": {
+    "temperature": "moderate to high",
+    "humidity": "moderate",
+    "rainfall": "moderate",
+    "ph": "5–7",
+    "nitrogen": "very high",
+    "phosphorus": "low",
+    "potassium": "low",
+    "notes": "Highly nitrogen-dependent crop."
+  },
+
+  "coffee": {
+    "temperature": "moderate",
+    "humidity": "variable",
+    "rainfall": "moderate",
+    "ph": "5–7",
+    "nitrogen": "high",
+    "phosphorus": "low",
+    "potassium": "low",
+    "notes": "Grows well in humid and moderate climates."
+  },
+
+  "jute": {
+    "temperature": "moderate",
+    "humidity": "high",
+    "rainfall": "high",
+    "ph": "5–7",
+    "nitrogen": "high",
+    "phosphorus": "low",
+    "potassium": "low",
+    "notes": "Requires humid conditions and high rainfall."
+  },
+
+  "pomegranate": {
+    "temperature": "moderate",
+    "humidity": "high",
+    "rainfall": "moderate",
+    "ph": "5–7",
+    "nitrogen": "low",
+    "phosphorus": "low",
+    "potassium": "low",
+    "notes": "Adaptable crop with moderate environmental needs."
+  }
+}

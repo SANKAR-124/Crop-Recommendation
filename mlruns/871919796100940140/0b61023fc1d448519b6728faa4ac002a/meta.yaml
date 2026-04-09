@@ -1,0 +1,14 @@
+artifact_uri: file:///d:\ML_1\mlruns/871919796100940140/0b61023fc1d448519b6728faa4ac002a/artifacts
+end_time: 1775574439623
+entry_point_name: ''
+experiment_id: '871919796100940140'
+lifecycle_stage: active
+run_id: 0b61023fc1d448519b6728faa4ac002a
+run_name: KNN
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1775574436033
+status: 3
+tags: []
+user_id: Lenovo
