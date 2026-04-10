@@ -4,13 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Result — CropWise</title>
+  <title>Result — FarmWise</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
   <nav class="navbar">
-    <a href="/" class="navbar__brand">🌾 CropWise</a>
+    <a href="/" class="navbar__brand"> FarmWise</a>
     <ul class="navbar__links">
       <li><a href="/">Home</a></li>
       <li><a href="/input">Input</a></li>
@@ -19,12 +20,13 @@
 
   <div class="result-page">
     <div class="result-page-wide">
-      <h1 class="fade-in" style="text-align: center;">🌾 Your Top 3 Recommendations</h1>
+      <h1 class="fade-in" style="text-align: center;"> Recommendations</h1>
       <div class="overview-grid fade-in fade-in-d1">
 
-        <div class="result-card"
+        <div class="result-card1"
           style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-          <div class="result-card__title" style="margin-bottom: 1rem; text-align: center;">Primary Match</div>
+          <div class="result-card__title" style="margin-bottom: 1rem; text-align: center;"><b>Primary Match</b></div>
+          <span class="crop-name">{{ top_crops[0].name }}</span>
           <div class="confidence-ring-wrapper">
             <svg width="150" height="150" viewBox="0 0 120 120">
               <circle class="ring-bg" cx="60" cy="60" r="50" />
@@ -32,24 +34,25 @@
                 style="--target-offset: {{ 314 - (top_crops[0].confidence / 100 * 314) }};" />
             </svg>
             <div class="ring-content">
-              <span class="ring-crop-name">{{ top_crops[0].name }}</span>
               <span class="ring-score">{{ top_crops[0].confidence }}%</span>
             </div>
           </div>
+          <p>Confidence Score</p>
         </div>
 
-        <div class="result-card">
+        <div class="result-card1">
           <div class="result-card__title">Top 3 Recommendations</div>
           <div class="top3-list">
             {% for crop in top_crops[:3] %}
             <div class="top3-item">
               <div class="top3-header">
-                <span class="top3-name">🌿 {{ crop.name }}</span>
-                <span class="top3-score">{{ crop.confidence }}%</span>
+                <div class="rank">#{{ loop.index }}</div>
+                <div class="name">   {{ crop.name }}</div>
+                <div class="score">{{ crop.confidence }}%</div>
               </div>
-              <div class="top3-bar-track">
+              <!-- <div class="top3-bar-track">
                 <div class="top3-bar-fill" style="--target-width: {{ crop.confidence }}%;"></div>
-              </div>
+              </div> -->
             </div>
             {% endfor %}
           </div>
@@ -59,16 +62,20 @@
 
       <div class="result-card primary-rec full-width-card fade-in fade-in-d1">
         <div class="badge-rank">#1 Recommendation ({{ top_crops[0].confidence }}% Match)</div>
-        <div class="crop-name">🌿 {{ top_crops[0].name }}</div>
+        <div class="crop-name"> {{ top_crops[0].name }}</div>
 
         <p class="crop-info-text">{{ top_crops[0].crop_info }}</p>
 
         <div class="cluster-badge">
           <strong>{{ top_crops[0].cluster_label }}</strong>: {{ top_crops[0].cluster_description }}
+          <ul class="cluster-det">
+              <li>{{ top_crops[0].cluster_conditions}}</li>
+              <li>{{top_crops[0].cluster_summary}}</li>
+            </ul>
         </div>
 
         <div class="revenue-dictionary" style="margin-top: 1.5rem;">
-          <div class="result-card__title">💰 Revenue Economics</div>
+          <div class="result-card__title"> Revenue Economics</div>
           <ul class="dict-list">
             <li><strong>crop:</strong> {{ top_crops[0].revenue_data.crop }}</li>
             <li><strong>unit:</strong> {{ top_crops[0].revenue_data.unit }}</li>
@@ -84,7 +91,7 @@
         </div>
 
         <div style="margin-top: 2rem;">
-          <div class="result-card__title">📊 Your Input vs Ideal Conditions</div>
+          <div class="result-card__title"> Your Input vs Ideal Conditions</div>
           <table class="comp-table">
             <thead>
               <tr>
@@ -110,16 +117,21 @@
         {% for crop in top_crops[1:] %}
         <div class="result-card fade-in fade-in-d2">
           <div class="badge-rank">#{{ loop.index + 1 }} Recommendation ({{ crop.confidence }}% Match)</div>
-          <div class="crop-name" style="font-size: 1.8rem; color: var(--green-primary);">🌿 {{ crop.name }}</div>
-
-          <p class="crop-info-text" style="font-size: 0.95rem; margin: 1rem 0;">{{ crop.crop_info }}</p>
+          <div class="crop-name" style="font-size: 1.8rem; color: var(--green-primary);"> {{ crop.name }}</div>
+          <div class="crop-info">  
+            <p class="crop-info-text" style="font-size: 0.95rem; margin: 1rem 0;">{{ crop.crop_info }}</p>
+          </div>
 
           <div class="cluster-badge" style="font-size: 0.85rem;">
             <strong>{{ crop.cluster_label }}</strong>: {{ crop.cluster_description }}
+            <ul class="cluster-det">
+              <li>{{crop.cluster_conditions}}</li>
+              <li>{{crop.cluster_summary}}</li>
+            </ul>
           </div>
 
           <div class="revenue-dictionary" style="margin-top: 1.5rem;">
-            <div class="result-card__title" style="font-size: 1.1rem;">💰 Revenue Economics</div>
+            <div class="result-card__title" style="font-size: 1.1rem;"> Revenue Economics</div>
             <ul class="dict-list" style="font-size: 0.95rem;">
               <li><strong>crop:</strong> {{ crop.revenue_data.crop }}</li>
               <li><strong>unit:</strong> {{ crop.revenue_data.unit }}</li>
@@ -139,8 +151,8 @@
 
       <div class="bottom-metrics-grid fade-in fade-in-d3">
 
-        <div class="result-card">
-          <div class="result-card__title">📊 Feature Importance</div>
+        <div class="result-card2">
+          <div class="result-card__title"> Feature Importance</div>
           <div class="bar-chart-container">
             {% for feature in top_features %}
             <div class="bar-row">
@@ -156,7 +168,7 @@
         </div>
 
         <div class="result-card">
-          <div class="result-card__title">📝 Input Summary</div>
+          <div class="result-card__title"> Input Summary</div>
           <table class="summary-table">
             <tbody>
               <tr>
@@ -194,13 +206,22 @@
       </div>
 
       <div style="text-align:center; margin: 3rem 0;">
-        <a href="/input" class="btn btn--sand btn--large">Calculate Another Field 🔄</a>
+        <a href="/input" class="btn btn--sand btn--large">Try Again</a>
       </div>
     </div>
   </div>
 
   <footer class="footer">
-    <p>© 2026 CropWise — Smart Crop Recommendation System</p>
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <p>© 2026 FarmWise — Smart Crop Recommendation System</p>
+      <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 0.8rem;">
+        <div style="display: flex; gap: 1.2rem;">
+          <a href="https://www.linkedin.com/in/sankar-krishna-p/" target="_blank" rel="noopener noreferrer" title="LinkedIn" style="font-size: 1.5rem; color: #4e0ac2; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://github.com/SANKAR-124" target="_blank" rel="noopener noreferrer" title="GitHub" style="font-size: 1.5rem; color: #333; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <p style="font-weight: bold; font-size: 1.1rem; background: linear-gradient(135deg, #2d6a4f, #52b788); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin: 0;">✨ Built by SANKAR</p>
+      </div>
+    </div>
   </footer>
 
   <script src="{{ url_for('static', filename='main.js') }}"></script>

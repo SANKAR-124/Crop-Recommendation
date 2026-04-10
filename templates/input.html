@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Input — CropWise</title>
+  <title>Input — FarmWise</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <nav class="navbar">
-    <a href="/" class="navbar__brand">🌾 CropWise</a>
+    <a href="/" class="navbar__brand"> FarmWise</a>
     <ul class="navbar__links">
       <li><a href="/">Home</a></li>
       <li><a href="/input">Input</a></li>
@@ -68,13 +69,22 @@
       </div>
 
       <div class="form-submit">
-        <button type="submit" class="btn btn--primary btn--large">Recommend Crop 🌱</button>
+        <button type="submit" class="btn btn--primary btn--large">Recommend Crop </button>
       </div>
     </form>
   </div>
 
   <footer class="footer">
-    <p>© 2026 CropWise — Smart Crop Recommendation System</p>
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <p>© 2026 FarmWise — Smart Crop Recommendation System</p>
+      <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 0.8rem;">
+        <div style="display: flex; gap: 1.2rem;">
+          <a href="https://www.linkedin.com/in/sankar-krishna-p/" target="_blank" rel="noopener noreferrer" title="LinkedIn" style="font-size: 1.5rem; color: #4e0ac2; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://github.com/SANKAR-124" target="_blank" rel="noopener noreferrer" title="GitHub" style="font-size: 1.5rem; color: #333; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <p style="font-weight: bold; font-size: 1.1rem; background: linear-gradient(135deg, #2d6a4f, #52b788); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin: 0;">✨ Built by SANKAR</p>
+      </div>
+    </div>
   </footer>
 
   <script src="{{ url_for('static', filename='main.js') }}"></script>
