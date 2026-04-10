@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Input — CropWise</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="/" class="navbar__brand">🌾 CropWise</a>
+    <ul class="navbar__links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/input">Input</a></li>
+    </ul>
+  </nav>
+
+  <div class="form-page fade-in">
+    <h1>🌿 Enter Your Field Data</h1>
+    <p class="subtitle">Provide soil and climate details for a personalized crop recommendation</p>
+
+    <form action="/predict" method="POST">
+      <div class="form-section fade-in fade-in-d1" data-animate>
+        <div class="form-section__title">🧪 Soil Nutrients</div>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="N">Nitrogen (kg/ha)</label>
+            <input type="number" id="N" name="N" min="0" max="140" step="0.001" placeholder="e.g. 90" required>
+            <span class="hint">Amount of nitrogen in the soil (0–140 kg/ha)</span>
+          </div>
+          <div class="form-group">
+            <label for="P">Phosphorous (kg/ha)</label>
+            <input type="number" id="P" name="P" min="5" max="145" step="0.001" placeholder="e.g. 42" required>
+            <span class="hint">Available phosphorous content (5–145 kg/ha)</span>
+          </div>
+          <div class="form-group">
+            <label for="K">Potassium (kg/ha)</label>
+            <input type="number" id="K" name="K" min="5" max="205" step="0.001" placeholder="e.g. 43" required>
+            <span class="hint">Available potassium content (5–205 kg/ha)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-section fade-in fade-in-d2" data-animate>
+        <div class="form-section__title">🌦️ Climate & Soil pH</div>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="temperature">Temperature (°C)</label>
+            <input type="number" id="temperature" name="temperature" min="8" max="44" step="0.001" placeholder="e.g. 25.5" required>
+            <span class="hint">Average temperature of the region (8–44°C)</span>
+          </div>
+          <div class="form-group">
+            <label for="humidity">Humidity (%)</label>
+            <input type="number" id="humidity" name="humidity" min="14" max="100" step="0.001" placeholder="e.g. 72.0" required>
+            <span class="hint">Relative humidity percentage (14–100%)</span>
+          </div>
+          <div class="form-group">
+            <label for="ph">Soil pH</label>
+            <input type="number" id="ph" name="ph" min="3.5" max="10" step="0.001" placeholder="e.g. 6.5" required>
+            <span class="hint">Acidity/alkalinity of soil (3.5–10.0)</span>
+          </div>
+          <div class="form-group">
+            <label for="rainfall">Rainfall (mm)</label>
+            <input type="number" id="rainfall" name="rainfall" min="20" max="300" step="0.001" placeholder="e.g. 120.0" required>
+            <span class="hint">Average annual rainfall (20–300 mm)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-submit">
+        <button type="submit" class="btn btn--primary btn--large">Recommend Crop 🌱</button>
+      </div>
+    </form>
+  </div>
+
+  <footer class="footer">
+    <p>© 2026 CropWise — Smart Crop Recommendation System</p>
+  </footer>
+
+  <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>

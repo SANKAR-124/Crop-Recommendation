@@ -2,8 +2,10 @@ import joblib
 import numpy as np
 import pandas as pd
 
+model=joblib.load("modelss/svm_model.pkl")
+
 def predict(N,P,K,temp,humidity,ph,rainfall):
-    model=joblib.load("modelss/svm_model.pkl")
+    
     # scaler=joblib.load("modelss/scaler_svm.pkl")
 
     # input_data=np.array([[N,P,K,temp,humidity,ph,rainfall]])
@@ -31,3 +33,6 @@ def predict(N,P,K,temp,humidity,ph,rainfall):
         result.append((crop_name, probability))
     
     return result
+
+# y=predict(3,23,42,12,56,5.4,100.4)
+# print(y)

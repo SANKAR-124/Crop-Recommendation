@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CropWise — Smart Crop Recommendation</title>
+  <meta name="description" content="AI-powered crop recommendation system based on soil and climate data. Smart farming starts with the right crop.">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="/" class="navbar__brand">🌾 CropWise</a>
+    <ul class="navbar__links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/input">Input</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero fade-in">
+    <h1>🌱 CropWise</h1>
+    <p class="tagline">Smart farming starts with the right crop</p>
+    <p class="desc">Enter your soil nutrients, climate conditions, and let our AI-powered engine recommend the best crop for your land — backed by data science and agricultural research.</p>
+    <a href="/input" class="btn btn--primary btn--large">Get Recommendation →</a>
+  </section>
+
+  <section class="features">
+    <h2>Why CropWise?</h2>
+    <div class="features__grid">
+      <div class="feature-card fade-in fade-in-d1" data-animate>
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="32" cy="32" r="28" stroke="#2d6a4f" stroke-width="3"/>
+          <path d="M22 34 l6 6 14-16" stroke="#52b788" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h3>AI-Powered</h3>
+        <p>Machine learning models trained on thousands of agricultural data points for accurate predictions.</p>
+      </div>
+      <div class="feature-card fade-in fade-in-d2" data-animate>
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="12" y="28" width="40" height="24" rx="4" stroke="#2d6a4f" stroke-width="3"/>
+          <path d="M20 28 V20 a12 12 0 0 1 24 0 v8" stroke="#a47148" stroke-width="3"/>
+          <circle cx="32" cy="40" r="4" fill="#52b788"/>
+        </svg>
+        <h3>Soil-Based</h3>
+        <p>Analyses Nitrogen, Phosphorous, Potassium, and pH levels to match your soil profile.</p>
+      </div>
+      <div class="feature-card fade-in fade-in-d3" data-animate>
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="32" cy="26" r="10" stroke="#2d6a4f" stroke-width="3"/>
+          <path d="M18 50 c0-10 8-16 14-16 s14 6 14 16" stroke="#52b788" stroke-width="3" stroke-linecap="round"/>
+          <path d="M44 18 l6-6 M44 26 h8 M44 34 l6 6" stroke="#d4a373" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <h3>Climate-Aware</h3>
+        <p>Factors in temperature, humidity, and rainfall to ensure the crop thrives in your region.</p>
+      </div>
+      <div class="feature-card fade-in fade-in-d4" data-animate>
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="14" y="36" width="8" height="20" rx="2" fill="#52b788"/>
+          <rect x="28" y="24" width="8" height="32" rx="2" fill="#2d6a4f"/>
+          <rect x="42" y="12" width="8" height="44" rx="2" fill="#a47148"/>
+          <path d="M8 60 h 48" stroke="#2d6a4f" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <h3>Economic & AI Insights</h3>
+        <p>Uses Explainable AI and profit analysis to show exactly why a crop maximizes your returns.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2026 CropWise — Smart Crop Recommendation System</p>
+  </footer>
+
+  <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>
