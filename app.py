@@ -27,9 +27,6 @@ def predict_route():
     global final_result
 
     try:
-        # 🛡️ TRAP 1: Form Inputs Empty or Invalid
-        # If a user submits without filling a box, float("") throws a ValueError.
-        # .get("N", 0) ensures there is a fallback, but we use a try-except to be safe.
         try:
             N = float(request.form.get("N", 0))
             P = float(request.form.get("P", 0))
@@ -41,11 +38,10 @@ def predict_route():
         except (TypeError, ValueError):
             return "Error: Please ensure all input fields contain valid numbers.", 400
 
-        # Get Predictions
+        
         result = predict(N, P, K, temp, humidity, ph, rainfall)
         
-        # 🛡️ TRAP 2: Re-integrating the Cluster Call
-        # We call the cluster model here. Ensure get_cluster() uses the standard_scaler.pkl!
+        
         cluster_id = get_cluster(N, P, K, temp, humidity, ph, rainfall)
         user_input = pd.DataFrame([{
             "N": N,
@@ -63,13 +59,10 @@ def predict_route():
             
             exp = generate_exp(crop_name,cluster_id,user_input)
             
-            # 🛡️ TRAP 3: Missing Crop in Economics JSON
-            # If the model predicts a crop that you forgot to add to crop_economics.json,
-            # calc_rev() will crash the whole app. We wrap it in a try-except.
+            
             try:
                 rev = calc_rev(crop_name)
             except Exception:
-                # Fallback dictionary so the UI doesn't break
                 rev = {"crop": crop_name, "unit": "N/A", "revenue": "Data Unavailable"}
 
             c_info = exp.get('cluster', {})
@@ -126,7 +119,7 @@ def predict_route():
         return redirect(url_for('results'))
 
     except Exception as e:
-        # Catch-all for any completely unexpected server errors
+        
         return f"A critical error occurred: {str(e)}", 500
 
 
